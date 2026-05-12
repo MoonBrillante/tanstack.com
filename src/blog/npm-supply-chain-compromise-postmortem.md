@@ -198,7 +198,6 @@ These need answers before we close the postmortem.
 - How did the malicious commit get into the fork's git object store specifically — was it pushed directly via git, or was it created via the GitHub web UI (which would leave audit-log entries)?
 - Was `voicproducoes` a real account or a sock puppet? Cross-reference its activity history
 - Did the npm cache also get poisoned (the 6 duplicate `linux-npm-store-*` entries)? Were any actually used?
-- Does the attack require Nx Cloud, or would it have worked with just GitHub Actions cache?
 - Can we identify any other fork in the `TanStack/router` fork network that contains the orphan payload commit? (If yes, the cleanup is harder — every fork hosting it keeps it accessible via `github:tanstack/router#79ac49ee...`)
 - Are any other TanStack repos (router, query, table, form, virtual, etc.) using the same `bundle-size.yml`-style pattern? Audit needed
 - How many users actually downloaded the affected versions during the publish window? Get from npm support
